@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class ListMain1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		//ArrayListj
 		ArrayList ar = new ArrayList();
 		
@@ -32,6 +32,7 @@ public class ListMain1 {
 		for (int i=0;i<ar.size();i++) {
 			System.out.println(ar.get(i));
 		}
+		
 		//별개
 		//향상된 for문
 		//for(꺼낼데이터타입명 변수명 : collection변수명) {

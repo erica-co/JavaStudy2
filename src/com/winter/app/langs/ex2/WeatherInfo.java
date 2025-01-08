@@ -1,6 +1,8 @@
 package com.winter.app.langs.ex2;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class WeatherInfo {
 	
@@ -18,7 +20,22 @@ public class WeatherInfo {
 		  //info의 정보를 파싱해서
 		  //WeatherDTO에 담아서
 		  //WeatherDTO들을 리턴
-		  
+		  	String data = this.info.toString().replace("*", ",");
+		  	StringTokenizer st = new StringTokenizer(data,",");
+		  	ArrayList<WeatherDTO> ar = new ArrayList<>();
+		  	//배열의 index번호로 사용
+		  	int idx=0;
+		  	
+		  	while(st.hasMoreTokens()) {
+		  		WeatherDTO weatherDTO = new WeatherDTO();
+		  		weatherDTO.setCity(st.nextToken().trim());
+		  		weatherDTO.setGion(Integer.parseInt(st.nextToken().trim()));
+		  		weatherDTO.setHuminity(Double.parseDouble(st.nextToken().trim()));
+		  		weatherDTO.setStatus(st.nextToken().trim());
+		  		//weatherDTOs[idx]=weatherDTO;
+		  		ar.add(weatherDTO);
+		  		//idx++;
+		  	}
 		  
 		  //System.out.println(this.info);
 		  //1. split
@@ -47,24 +64,55 @@ public class WeatherInfo {
 				 System.out.println("검색할 도시명을 입력하세요");
 				 String name = sc.next();
 				 
-				 for(int i=0;i<dtos.length;i++) {
-					 	if(name.equals(dtos[i].getCity())) {
-					 		return dtos[i];
+				 for(int i=0;i<size;i++) {
+					 	if(name.equals(ar.get(i).getCity())) {
+					 		return ar.get(i);
 					 	}
 				 }
 				
 				 return null;
 		  
-		  
-				 
 		  }
-					  
-			  
+		
+			 public void add(ArrayList<WeatherDTO> ar, Scanner sc) {
+			 		WeatherDTO weatherDTO = new WeatherDTO();
+			 		System.out.println("도시명 입력");
+			 		
+			 		weatherDTO.setCity(sc.next());
+			 		
+			 		System.out.println("기온 입력");
+			 		weatherDTO.setGion(sc.nextInt());
+			 		
+			 		System.out.println("습도 입력");
+			 		weatherDTO.setHuminity(sc.nextDouble());
+			 		
+			 		System.out.println("날씨 입력");
+			 		weatherDTO.setStatus(sc.next());
+			 		
+			 		ar.add(weatherDTO);
+			 		
+			 }
+			 		
+
+			  public void delete(ArrayList <WeatherDTO> ar , Scanner sc) {
+				  		System.out.println("도시명 입력");
+				  		String name = sc.next();
+				  		
+					  for(int i=0;i<ar.size();i++) {
+						  if (name.equals(ar.get(i).getCity())) {
+							  ar.remove(i);
+							  break;
+						  }
+						  
+						  }
+					  }
+					 
 			  
 
 			  
 			  
-	  }
+	  
+			  }
 				 
 		  
 		 
