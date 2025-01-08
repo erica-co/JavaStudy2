@@ -5,7 +5,8 @@ public class Wrapper4 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//10진수
-		int num = 1;
+		int num = 17;
+		System.out.println(num);
 		
 		//2진수
 		String str = Integer.toBinaryString(num); //0~9

@@ -19,6 +19,7 @@ public class WeatherInfo {
 		  //WeatherDTO에 담아서
 		  //WeatherDTO들을 리턴
 		  
+		  
 		  //System.out.println(this.info);
 		  //1. split
 		  //2. 구분자 통일

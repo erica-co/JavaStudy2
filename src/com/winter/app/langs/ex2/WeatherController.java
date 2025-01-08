@@ -32,9 +32,9 @@ public class WeatherController {
 					}else if(select ==3) {
 							WeatherDTO weatherDTO = weatherInfo.findByName(dtos, sc);
 							if(weatherDTO != null) {
-								weatherView.view(weatherDTO);
+								weatherView.view (weatherDTO);
 							}else {
-								weatherView.view("검색결과가 없다")
+								weatherView.view ("검색결과가 없다");
 							}
 					}else if(select ==4) {
 						
