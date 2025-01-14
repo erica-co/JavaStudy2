@@ -26,9 +26,9 @@ public class WeatherController {
 					System.out.println("6. 프로그램 종료");
 					int select = this. sc.nextInt();
 					if(select==1) {
-							dtos = weatherInfo.init();
+							dtos = WeatherInfo.init();
 					}else if(select==2) {
-							weatherView.view (dtos);
+							weatherView.view(dtos);
 					}else if(select ==3) {
 							WeatherDTO weatherDTO = weatherInfo.findByName(dtos, sc);
 							if(weatherDTO != null) {
