@@ -32,7 +32,8 @@ public class LocationDAO {
 	
 	
 	
-			public void getDetail () throws Exception {
+			public LocationDTO getDetail () throws Exception {
+				LocationDTO locationDTO=null;
 				Connection connection = DBConnection.getConnetion();
 				String sql = "SELECT * FROM LOCATIONS WHERE LOCATION_ID=1000";
 				PreparedStatement st = connection.prepareStatement(sql);
@@ -44,6 +45,8 @@ public class LocationDAO {
 				}
 				
 				DBConnection.disConnect(rs, st, connection);
+				
+				return locationDTO;
 			}
 	
 	
