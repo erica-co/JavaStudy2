@@ -6,10 +6,15 @@ public class TestMain {
 		
 		try {
 			
-			DBConnectionTest test = new DBConnectionTest();
-			test.getConnectionTest();
+			//DBConnectionTest test = new DBConnectionTest();
+			//test.getConnectionTest();
 			
+			ProductDAOTest productDAOTest = new ProductDAOTest();
 			
+			//userDAOTest.joinTest();
+			//userDAOTest.getListTest();
+			//userDAOTest.getDetailTest();
+			productDAOTest.getList();
 		} catch (Exception e) {
 			
 			e.printStackTrace();
