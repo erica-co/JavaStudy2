@@ -29,7 +29,6 @@ public class AccountDAO {
 				return result;
 			}
 			
-			
 			//계좌들의 정보를 조회- 특정한 회원의 계좌목록
 			public List<AccountDTO> getList()throws Exception{
 				Connection con = DBConnection.getConnection();

@@ -23,6 +23,8 @@ public class UserDAOTest {
 				System.out.println("Null이 아니다");
 			}else {
 				System.out.println("Null이다");
+				
+				
 			}
 		}
 		

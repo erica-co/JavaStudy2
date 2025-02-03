@@ -9,12 +9,14 @@ public class TestMain {
 			//DBConnectionTest test = new DBConnectionTest();
 			//test.getConnectionTest();
 			
+			//UserDAOTest userDAOTest = new UserDAOTest();
 			ProductDAOTest productDAOTest = new ProductDAOTest();
 			
 			//userDAOTest.joinTest();
 			//userDAOTest.getListTest();
 			//userDAOTest.getDetailTest();
 			productDAOTest.getList();
+			
 		} catch (Exception e) {
 			
 			e.printStackTrace();
